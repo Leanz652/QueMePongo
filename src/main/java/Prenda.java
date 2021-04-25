@@ -1,20 +1,14 @@
 public class Prenda {
-
   TipoPrenda tipo;
   MaterialPrenda material;
   Color colorPrincipal;
   Color colorSecundario;
 
-  Prenda(TipoPrenda tipo, MaterialPrenda material, Color colorPrincipal){
+  Prenda(TipoPrenda tipo, MaterialPrenda material, Color colorPrincipal, Color colorSecundario){
     this.tipo = tipo;
     this.material = material;
     this.colorPrincipal = colorPrincipal;
-
-
-  }
-
-  void setColorSecundario(Color color){
-    this.colorSecundario = color;
+    this.colorSecundario = colorSecundario;
   }
 
   TipoPrenda getTipoPrenda() {

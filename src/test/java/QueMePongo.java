@@ -19,7 +19,7 @@ public class QueMePongo {
   }
 
   public Prenda prendaDeTelaYColorPrimario(TipoPrenda tipo) {
-    return (new Prenda(tipo,MaterialPrenda.TELA,new Color(15,15,15)));
+    return (new Prenda(tipo,MaterialPrenda.TELA,new Color(15,15,15), null));
   }
 
 }
