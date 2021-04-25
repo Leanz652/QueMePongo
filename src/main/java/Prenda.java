@@ -3,6 +3,7 @@ public class Prenda {
   MaterialPrenda material;
   Color colorPrincipal;
   Color colorSecundario;
+  Trama trama;
 
   Prenda(TipoPrenda tipo, MaterialPrenda material, Color colorPrincipal, Color colorSecundario){
     this.tipo = tipo;
