@@ -1,4 +1,5 @@
 public enum MaterialPrenda {
     TELA,
-    PIEDRA
+    ALGODON,
+    PLASTICO
 }

@@ -3,13 +3,14 @@ public class Prenda {
   MaterialPrenda material;
   Color colorPrincipal;
   Color colorSecundario;
-  Trama trama;
+  Trama trama = Trama.LISA;
 
-  Prenda(TipoPrenda tipo, MaterialPrenda material, Color colorPrincipal, Color colorSecundario){
+  Prenda(TipoPrenda tipo, MaterialPrenda material, Color colorPrincipal, Color colorSecundario,Trama trama){
     this.tipo = tipo;
     this.material = material;
     this.colorPrincipal = colorPrincipal;
     this.colorSecundario = colorSecundario;
+    this.trama = trama;
   }
 
   TipoPrenda getTipoPrenda() {
@@ -31,6 +32,8 @@ public class Prenda {
   Color getColorSecundario() {
     return this.colorSecundario;
   }
+
+  Trama getTrama() { return this.trama;}
 }
 
 

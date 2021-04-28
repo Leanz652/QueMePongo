@@ -1,5 +1,7 @@
 public class Usuarios {
-    Prenda prendaPreferida;
+
+    Uniforme uniformePreferido;
+
 }
 
 
