@@ -1,3 +1,6 @@
+package prenda;
+
+import excepciones.PrendaInvalidaException;
 import static java.util.Objects.requireNonNull;
 
 public class BorradorPrenda {
@@ -6,36 +9,37 @@ public class BorradorPrenda {
     Color colorPrincipal;
     Color colorSecundario;
     Trama trama = Trama.LISA;
+    double tmpMaxima;
 
     public BorradorPrenda(TipoPrenda tipo) {
         this.tipo = requireNonNull(tipo, "no puede ir nulo");
     }
 
-    void buildMaterial(MaterialPrenda material) {
+    public void buildMaterial(MaterialPrenda material) {
         this.material = material;
     }
-    void buildColorPrincipal(Color color) {
+    public void buildColorPrincipal(Color color) {
         this.colorPrincipal = color;
     }
     void buildColorSecundario(Color color) {
         this.colorSecundario = color;
     }
-    void buildTrama(Trama trama) {
+    public void buildTrama(Trama trama) {
         if (trama == null) {
             this.trama = Trama.LISA;
         } else {this.trama = trama;}
     }
 
+    public void buildTmpMaxima(double tmpMaxima){ this.tmpMaxima = tmpMaxima;}
 
     private void validarPrenda() {
         if (material == null || colorPrincipal == null){
-            throw new PrendaInvalidaException("Prenda invalida, indicar material/color principal");
+            throw new PrendaInvalidaException("prenda.Prenda invalida, indicar material/color principal");
         }
     }
 
-
-    Prenda crearPrenda() {
+    public Prenda crearPrenda() {
         validarPrenda();
-        return new Prenda(tipo,material,colorPrincipal,colorSecundario,trama);
+        return new Prenda(tipo,material,colorPrincipal,colorSecundario,trama,tmpMaxima);
     }
 }

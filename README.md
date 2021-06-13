@@ -1,4 +1,4 @@
-# QueMePongo - Primera iteración - Leandro Alvarez
+# TestPrenda - Primera iteración - Leandro Alvarez
 
 
 Dudas: 

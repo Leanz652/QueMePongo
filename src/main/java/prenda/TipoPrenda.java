@@ -1,3 +1,5 @@
+package prenda;
+
 public enum TipoPrenda {
   ZAPATO
       {

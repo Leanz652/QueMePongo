@@ -1,13 +1,15 @@
+import excepciones.PrendaInvalidaException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import prenda.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class testBorrador {
+public class TestBorrador {
 
   @Test
-  @DisplayName("Al instanciar un BorradorPrenda sin TipoPrenda, arroja una excepcion")
+  @DisplayName("Al instanciar un prenda.BorradorPrenda sin prenda.TipoPrenda, arroja una excepcion")
   void TipoPrendaNullArrojaNullPointerException() {
     Assertions.assertThrows(NullPointerException.class,
         () -> new BorradorPrenda(null));

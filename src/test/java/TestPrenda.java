@@ -1,9 +1,9 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import prenda.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class QueMePongo {
+public class TestPrenda {
 
   @Test
   void laCategoriaDeUnZAPATOesCALZADO() {
@@ -19,7 +19,7 @@ public class QueMePongo {
   }
 
   public Prenda prendaDeTelaYColorPrimario(TipoPrenda tipo) {
-    return (new Prenda(tipo,MaterialPrenda.TELA,new Color(15,15,15), null, null));
+    return (new Prenda(tipo, MaterialPrenda.TELA,new Color(15,15,15), null, null,0));
   }
 
 }

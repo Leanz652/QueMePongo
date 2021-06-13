@@ -1,6 +1,7 @@
+package excepciones;
 
 public class PrendaInvalidaException extends RuntimeException {
-  PrendaInvalidaException(String msg) {
+  public PrendaInvalidaException(String msg) {
     super(msg);
   }
 }
