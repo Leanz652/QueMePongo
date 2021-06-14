@@ -1,10 +1,13 @@
 package servicios;
 
+import avisos.Alerta;
+
+import java.util.List;
 import java.util.Map;
 
 public class ServicioMeteorologicoAccuWeather implements ServicioMeteorologico
 {
-  private AccuWeatherAPI api;
+  private AccuWeatherAPI api = new AccuWeatherAPI();
   private String direccion = "Buenos Aires, Argentina";
 
   @Override
@@ -18,11 +21,14 @@ public class ServicioMeteorologicoAccuWeather implements ServicioMeteorologico
     return (double) consultarApi().get("PrecipitationProbability");
   }
 
+  @Override
+  public List<Alerta> getAlertaMeteorologica() {
+   return api.getAlertas(direccion);
+  }
+
   private Map<String, Object> consultarApi()
   {
     return api.getWeather(direccion).get(0);
   }
-
-
 
 }

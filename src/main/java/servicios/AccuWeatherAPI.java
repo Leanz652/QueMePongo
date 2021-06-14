@@ -1,5 +1,7 @@
 package servicios;
 
+import avisos.Alerta;
+
 import java.util.*;
 
 public final class AccuWeatherAPI {
@@ -22,5 +24,10 @@ public final class AccuWeatherAPI {
       });
     }
     });
+  }
+
+  List<Alerta> getAlertas(String ciudad)
+  {
+    return Arrays.asList(Alerta.TORMENTA,Alerta.GRANIZO );
   }
 }
